@@ -1,0 +1,35 @@
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+
+  .text();
+  background-color: @white;
+}
+
+.body-lock {
+  position: relative;
+  overflow: hidden;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    cursor: url("../img/cursor.svg"), pointer;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

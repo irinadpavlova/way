@@ -1,0 +1,151 @@
+.review {
+  position: absolute;
+  z-index: 2;
+  padding: 30px;
+  top: 193px;
+  left: 67%;
+  width: 382px;
+  min-height: 367px;
+  background-color: @white;
+}
+
+.review__title {
+  margin: 0;
+  padding-bottom: 13px;
+  margin-bottom: 22px;
+  position: relative;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  letter-spacing: -0.69px;
+
+  color: #2C2E3F;
+
+  &::before {
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    width: 75px;
+    height: 1px;
+    content: "";
+    background: #fe7865;
+  }
+}
+
+.review__text {
+  margin: 0;
+  margin-bottom: 41px;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: -0.41px;
+  color: rgba(44, 46, 63, 0.7);
+}
+
+.review__name {
+  margin: 0;
+  position: relative;
+  font-family: "Poppins", "Arial", sans-serif;
+  padding-left: 55px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.47px;
+  color: #2C2E3F;
+
+  &::before {
+    left: 0;
+    top: -13px;
+    position: absolute;
+    width: 37px;
+    height: 38px;
+    content: "";
+    z-index: 2;
+  }
+}
+
+.review__name--vlada {
+  &::before {
+    background-image: url("../img/vlada.png");
+  }
+}
+
+.review__name--marina {
+  &::before {
+    background-image: url("../img/marina.png");
+  }
+}
+
+.review__name--misha {
+  &::before {
+    background-image: url("../img/misha.png");
+  }
+}
+
+.review__name--nastia {
+  &::before {
+    background-image: url("../img/nastia.png");
+  }
+}
+
+.review__name--vova {
+  &::before {
+    background-image: url("../img/vova.png");
+  }
+}
+
+@media ( max-width: 1023px ) {
+  .review {
+    padding: 28px 30px;
+    top: 446px;
+    left: 50%;
+    margin-left: -191px;
+    width: 382px;
+  }
+
+  .review__title {
+    &::before {
+      width: 21%;
+    }
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .review {
+    position: relative;
+    z-index: 2;
+    width: 268px;
+    padding: 30px 20px;
+    top: -363px;
+    left: 50%;
+    margin-left: -134px;
+  }
+
+  .review__title {
+    padding-bottom: 13px;
+    margin: 0 0 20px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+
+    &::before {
+      left: 80px;
+      width: 29%;
+    }
+  }
+
+  .review__name {
+    padding-top: 48px;
+    padding-left: 0;
+    text-align: center;
+
+    &:before {
+      top: 0;
+      left: 94px;
+    }
+  }
+
+  .review__text {
+    margin-bottom: 17px;
+    text-align: center;
+  }
+}

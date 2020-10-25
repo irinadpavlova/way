@@ -1,0 +1,222 @@
+.prices {
+  width: 61.29%;
+  margin: 0 auto;
+  margin-top: 200px;
+  margin-bottom: 109px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.prices__item-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 65.54%;
+}
+
+.prices__about {
+  width: 24.8%;
+  margin-top: 113px;
+  order: 2;
+}
+
+.prices__item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: 1px solid rgba(44, 46, 63, 0.3);
+  border-radius: 6px;
+}
+
+.prices__title {
+  margin: 0;
+  margin-bottom: 28px;
+  position: relative;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 90px;
+  color: #2C2E3F;
+  padding-bottom: 20px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #FE7865;
+  }
+}
+
+.prices__text {
+  margin: 0;
+  margin-bottom: 60px;
+  font-size: 16px;
+  line-height: 27px;
+  color: rgba(44, 46, 63, 0.7);
+  letter-spacing: normal;
+}
+
+.prices__contacts-title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 34px;
+  color: #141517;
+  letter-spacing: normal;
+  margin-left: 45px;
+  margin-bottom: 2px;
+}
+
+.prices__phone-link {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #000000;
+  letter-spacing: normal;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.4;
+  }
+}
+
+.prices__number {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.prices__icon-phone {
+  margin-top: 13px;
+}
+
+@media (max-width: 1860px) {
+  .prices {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1445px) {
+  .prices {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1270px) {
+  .prices {
+    width: 98%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .prices {
+    width: 100%;
+    max-width: 1000px;
+    padding-left: 21px;
+    padding-right: 21px;
+    margin-top: 20px;
+    margin-bottom: 95px;
+    flex-direction: column;
+  }
+
+  .prices__item-wrapper {
+    width: 86%;
+    margin: 0 auto;
+  }
+
+  .prices__about {
+    width: 100%;
+    margin-top: 23px;
+    margin-bottom: 30px;
+    order: -1;
+  }
+
+  .prices__item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 1px solid rgba(44, 46, 63, 0.3);
+    border-radius: 6px;
+  }
+
+  .prices__title {
+    margin-bottom: 21px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+    padding-bottom: 0;
+    text-align: center;
+
+    &::before {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  .prices__text {
+    margin-bottom: 39px;
+    text-align: center;
+  }
+
+  .prices__contacts-title {
+    font-size: 18px;
+    line-height: 24px;
+    margin-left: 0;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .prices__phone-link {
+    width: 100%;
+    font-size: 18px;
+    color: #fe7865;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  .prices__number {
+    margin-left: 0;
+  }
+
+  .prices__icon-phone {
+    display: none;
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .prices {
+    max-width: 600px;
+    padding-left: 15px;
+    padding-right: 17px;
+    margin-top: -430px;
+    margin-bottom: 0;
+  }
+
+  .prices__about {
+    margin-bottom: 40px;
+  }
+
+  .prices__title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 36px;
+    padding-bottom: 0;
+  }
+
+  .prices__text {
+    margin-bottom: 26px;
+  }
+
+  .prices__item-wrapper {
+    width: 100%;
+    max-width: 410px;
+  }
+}

@@ -1,0 +1,137 @@
+.form {
+  width: 59.8%;
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-bottom: 171px;
+  padding-top: 70px;
+  min-height: 455px;
+  background: url("../img/sunset-desktop@1x.png") no-repeat left top;
+  background-size: 73.8% auto;
+}
+
+@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+  .form {
+    background-image: url("../img/sunset-desktop@2x.png");
+    background-size: 73.8% auto;
+  }
+}
+
+.form__wrapper {
+  width: 656px;
+  padding: 50px;
+  margin-left: 45%;
+  background-color: @white;
+  color: #141517;
+  box-shadow: 0px 4px 30px rgba(41, 54, 66, 0.1);
+  border-radius: 5px;
+}
+
+.form__title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 32px;
+  letter-spacing: normal;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.form__text {
+  margin: 0;
+  margin-bottom: 22px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+@media (max-width: 1800px) {
+  .form {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1445px) {
+  .form {
+    width: 90%;
+  }
+
+  .form__wrapper {
+    margin-left: 30%;
+  }
+}
+
+@media (max-width: 1270px) {
+  .form {
+    width: 96%;
+  }
+}
+
+@media (max-width: @tablet-width) {
+  .form {
+    width: 100%;
+    min-height: 456px;
+    background: url("../img/sunset-tablet@1x.png") no-repeat left top;
+    background-size: cover;
+    margin-bottom: 79px;
+  }
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    .form {
+      background-image: url("../img/sunset-tablet@2x.png");
+      background-size: cover;
+    }
+  }
+
+  .form__wrapper {
+    width: 656px;
+    padding: 50px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .form {
+    width: 100%;
+    min-height: 441px;
+    padding-top: 21px;
+    background: none;
+    margin-bottom: 70px;
+  }
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    .form {
+      background: none;
+    }
+  }
+
+  .form__wrapper {
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+    max-width: 410px;
+    margin: 0 auto;
+    background-color: #fbf8f8;
+    color: #141517;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .form__text {
+    width: 288px;
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .form__title {
+    margin-bottom: 19px;
+  }
+
+  .form__text {
+    margin-bottom: 19px;
+  }
+}

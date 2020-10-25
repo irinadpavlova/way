@@ -1,0 +1,152 @@
+.modal__button {
+  display: block;
+  width: 176px;
+  margin: 0 auto;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  align-items: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: @white;
+  background: #fe7865;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #f17d4b;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.modal__input {
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+  width: 266px;
+  padding-top: 16px;
+  padding-right: 5px;
+  padding-bottom: 16px;
+  padding-left: 24px;
+  margin-right: 19px;
+  margin-bottom: 25px;
+  border-radius: 0;
+  border: 1px solid rgba(44, 46, 63, 0.3);
+  color: #141517;
+}
+
+.modal__input--invalid {
+  border: 1px solid #fe7865;
+}
+
+.modal__error {
+  display: none;
+  margin-bottom: 3px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #fe7865;
+}
+
+.modal__error--active {
+  display: block;
+}
+
+.modal__tel-wrapper {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+
+  &::before {
+    content: "*";
+    position: absolute;
+    font-weight: 400;
+    top: 7px;
+    left: 13px;
+    width: 6px;
+    height: 6px;
+    font-size: 17px;
+    line-height: 21px;
+    color: #fe7865;
+  }
+}
+
+.modal__input[type="email"] {
+  margin-right: 0;
+  padding-left: 12px;
+}
+
+.modal__input[placeholder] {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: "Montserrat", "Arial", sans-serif;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.modal__input::-webkit-input-placeholder {
+  color: #141517;
+}
+
+.modal__input:-ms-input-placeholder {
+  color: #141517;
+}
+
+.modal__input::-moz-placeholder {
+  color: #141517;
+}
+
+@media (max-width: @tablet-width) {
+  .modal__input {
+    margin-bottom: 19px;
+  }
+
+  .modal__button {
+    width: 250px;
+    padding-top: 20px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .modal__button--submit {
+    width: 100%;
+  }
+
+  .modal__phone,
+  .modal__email {
+    width: 100%;
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .modal__tel-wrapper {
+    display: block;
+  }
+
+  .modal__input {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .modal__button {
+    width: 100%;
+  }
+}

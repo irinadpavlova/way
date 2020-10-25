@@ -1,0 +1,140 @@
+.modal-wrapper {
+  display: none;
+  top: 50%;
+  left: 50%;
+  margin-top: -222px;
+  margin-left: -364px;
+  position: fixed;
+  z-index: 10;
+  width: 728px;
+  min-height: 444px;
+  padding: 72px;
+  padding-left: 412px;
+  padding-bottom: 20px;
+  background-color: #fbf8f8;
+  background-image: url("../img/modal@1x.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: auto 100%;
+}
+
+@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+  .modal-wrapper {
+    background-image: url("../img/modal@2x.png");
+    background-size: auto 100%;
+  }
+}
+
+.modal-wrapper__title {
+  margin: 0;
+  margin-bottom: 50px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 43px;
+  text-align: center;
+  color: #48494d;
+}
+
+.modal-wrapper__button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    z-index: 2;
+    position: absolute;
+    top: -3px;
+    left: 11px;
+    width: 1px;
+    height: 29px;
+    background-color: rgba(20, 21, 23, 0.2);
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.modal-wrapper--success {
+  background-image: none;
+  padding-top: 160px;
+  padding-left: 72px;
+}
+
+@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+  .modal-wrapper--success {
+    background-image: none;
+  }
+}
+
+.modal-wrapper__text {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 43px;
+  color: #48494D;
+}
+
+@media (max-width: @tablet-width) {
+  .modal-wrapper {
+    margin-top: -222px;
+    margin-left: -250px;
+    width: 500px;
+    min-height: 200px;
+    padding: 20px;
+    padding-left: 280px;
+  }
+
+  .modal-wrapper__title {
+    margin-bottom: 30px;
+    font-size: 21px;
+    line-height: 38px;
+  }
+
+  .modal-wrapper__button {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .modal-wrapper {
+    margin-top: -284px;
+    margin-left: -160px;
+    left: 50%;
+    width: 320px;
+    min-height: 568px;
+    padding: 16px;
+    padding-top: 80px;
+    padding-left: 16px;
+    background-image: none;
+  }
+}
+
+.modal-wrapper--show {
+  display: block;
+}

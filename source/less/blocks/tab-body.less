@@ -1,0 +1,181 @@
+.tab-body {
+  display: none;
+  width: 61.98%;
+  margin: 0 auto;
+}
+
+.tab-body--current {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  padding: 0px 10px;
+  padding-top: 80px;
+}
+
+.tab-body__content {
+  width: 32.09%;
+  margin-right: 8.40%;
+}
+
+.tab-body__title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 31px;
+  padding-top: 10px;
+  padding-bottom: 17px;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 90px;
+  letter-spacing: -1.245px;
+  color: #2C2E3F;
+
+  &::before {
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    width: 175px;
+    height: 3px;
+    content: "";
+    background: #fe7865;
+  }
+}
+
+.tab-body__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: -0.47px;
+  color: rgba(44, 46, 63, 0.7);
+  margin-bottom: 50px;
+}
+
+.tab-body__img-wrapper {
+  width: 36.75%;
+}
+
+.tab-body__img {
+  width: 100%;
+  height: 596px;
+  object-fit: cover;
+}
+
+.tab-body__link {
+  width: 250px;
+  padding-right: 10px;
+}
+
+@media (max-width: 1820px) {
+  .tab-body {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1270px)
+  .tab-body {
+    width: 96%;
+  }
+}
+
+@media (max-width: @tablet-width) {
+  .tab-body {
+    flex-direction: column;
+    width: 100%;
+    padding: 0px 10px;
+    padding-top: 80px;
+    margin: 0 auto;
+  }
+
+  .tab-body__content {
+    width: 100%;
+    margin: 0;
+  }
+
+  .tab-body__title {
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 17px;
+
+    font-size: 30px;
+    line-height: 45px;
+
+    text-align: center;
+    &::before {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  .tab-body__text {
+    margin: 0 auto;
+    width: 95%;
+    max-width: 900px;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: -0.47px;
+    color: rgba(44, 46, 63, 0.7);
+    margin-bottom: 18px;
+    font-size: 16px;
+    line-height: 28px;
+
+    text-align: center;
+  }
+
+  .tab-body__img-wrapper {
+    width: 100%;
+    background: url("../img/review-greece-tablet@1x.jpg") no-repeat bottom center;
+    background-color: #95bdd7;
+    background-size: cover;
+    min-height: 415px;
+  }
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    .tab-body__img-wrapper {
+      background-image: url("../img/review-greece-tablet@2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  .tab-body__img {
+    display: none;
+  }
+
+  .tab-body__link {
+    width: 250px;
+    margin: 0 auto;
+    margin-bottom: 31px;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+  }
+
+  .tab-body--current {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1190px;
+    padding: 0;
+    padding-top: 22px;
+    margin: 0 auto;
+  }
+}
+
+
+@media (max-width: @mobile-width) {
+  .tab-body__title {
+    margin-bottom: 5px;
+    padding-top: 2px;
+    padding-bottom: 17px;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 600;
+  }
+
+  .tab-body__text {
+    width: 88%;
+  }
+
+  .tab-body__link {
+    width: 288px;
+    margin-bottom: 49px;
+  }
+}
