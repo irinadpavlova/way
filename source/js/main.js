@@ -69,6 +69,7 @@
   var storageMail = "";
 
   var URL = 'https://echo.htmlacademy.ru';
+  // var URL = 'https://javascript.pages.academy/keksobooking';
   var StatusCode = {
     OK: 200
   };
@@ -198,8 +199,6 @@
     })
   };
 
-  form.setAttribute('novalidate', '');
-
   email.addEventListener("input", function (event) {
     if (email.validity.valid) {
       errorMail.classList.remove("modal__error--active");
@@ -252,62 +251,28 @@
     document.removeEventListener('keydown', onSuccessPopupEscPress);
   };
 
-  // var isFormValid = function () {
-  //   if (!email.validity.valid) {
-  //     evt.preventDefault();
-  //     errorMail.classList.add("modal__error--active");
-  //     email.classList.add("modal__input--invalid");
-  //   } else if (!phone.validity.valid) {
-  //     evt.preventDefault();
-  //     errorPhone.classList.add("modal__error--active");
-  //     phone.classList.add("modal__input--invalid");
-  //   } else {
-  //     if (isStorageSupport) {
-  //       localStorage.setItem("phone", phone.value);
-  //       localStorage.setItem("email", email.value);
-  //     }
-  //   }
-  // }
+  form.setAttribute('novalidate', '');
 
-  // form.addEventListener("submit", function (evt) {
-  //   if (!email) {
-  //     evt.preventDefault();
-  //     errorMail.classList.add("modal__error--active");
-  //     email.classList.add("modal__input--invalid");
-  //   } else if (!phone) {
-  //     evt.preventDefault();
-  //     errorPhone.classList.add("modal__error--active");
-  //     phone.classList.add("modal__input--invalid");
-  //   } else {
-  //     save(new FormData(form), function () {
-  //       openSuccessPopup();
-  //       closePopup();
-  //       overlay.classList.add("overlay--show");
-  //     }, function () {
-  //     });
-  //   evt.preventDefault();
-  // });
-  //
   form.addEventListener("submit", function (evt) {
     save(new FormData(form), function () {
-      openSuccessPopup();
-      popup.classList.remove("modal-wrapper--show");
-    }, function () {
-      if (!email.validity.valid) {
-        evt.preventDefault();
-        errorMail.classList.add("modal__error--active");
-        email.classList.add("modal__input--invalid");
+      if (email.validity.valid && phone.validity.valid) {
+        openSuccessPopup();
+        popup.classList.remove("modal-wrapper--show");
       } else if (!phone.validity.valid) {
         evt.preventDefault();
         errorPhone.classList.add("modal__error--active");
         phone.classList.add("modal__input--invalid");
-      } else {
-        if (isStorageSupport) {
-          localStorage.setItem("phone", phone.value);
-          localStorage.setItem("email", email.value);
-        }
+      } else if (!email.validity.valid) {
+        evt.preventDefault();
+        errorMail.classList.add("modal__error--active");
+        email.classList.add("modal__input--invalid");
+      } else if (isStorageSupport) {
+        localStorage.setItem("phone", phone.value);
+        localStorage.setItem("email", email.value);
       }
+    }, function () {
+      console.log("неправильный ввод");
     });
     evt.preventDefault();
-  }, false);
+  });
 })();
