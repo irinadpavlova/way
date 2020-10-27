@@ -80,15 +80,20 @@
     width: 100%;
     padding: 0 37px;
     flex-wrap: nowrap;
-    overflow: hidden;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 
     &::before {
-      width: 98%;
+      width: 100%;
     }
   }
 
   .tabs__item {
     margin-right: 16.4%;
+
+    &:last-child {
+      padding-right: 20px;
+    }
   }
 }
 
@@ -103,11 +108,6 @@
     width: 100%;
     padding: 0 15px;
     flex-wrap: nowrap;
-    overflow: hidden;
-
-    &::before {
-      width: 98%;
-    }
   }
 }
 
