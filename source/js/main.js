@@ -58,6 +58,7 @@
   var phone = document.querySelector(".modal__phone");
   var email = document.querySelector(".modal__email");
   var form = document.querySelector(".modal-wrapper__modal");
+  var formQuestion = document.querySelector(".form__modal");
   var buttonSubmit = document.querySelector(".button-submit");
   var errorPhone = document.querySelector('.modal__error--phone');
   var errorMail = document.querySelector('.modal__error--email');
@@ -241,6 +242,34 @@
         localStorage.setItem("phone", phone.value);
         localStorage.setItem("email", email.value);
       }
+    }, function () {
+      console.log("неправильный ввод");
+    });
+    evt.preventDefault();
+  });
+
+  var saveQuestion = function (data, onLoad, onError) {
+    var xhr = new XMLHttpRequest();
+    xhr.responseType = 'json';
+
+    xhr.addEventListener('load', function () {
+      if (xhr.status === StatusCode.OK) {
+        onLoad(xhr.response);
+      } else {
+        onError('Статус ответа: ' + xhr.status + ' ' + xhr.statusText);
+      }
+    });
+    xhr.addEventListener('error', function () {
+      onError('Произошла ошибка соединения');
+    });
+
+    xhr.open('POST', URL);
+    xhr.send(data);
+  }
+
+  formQuestion.addEventListener("submit", function (evt) {
+    saveQuestion(new FormData(formQuestion), function () {
+      openSuccessPopup();
     }, function () {
       console.log("неправильный ввод");
     });
